@@ -1,0 +1,7 @@
+digest: 0580c3ae
+name: dataset
+profile: '{"num_rows": 1745, "num_elements": 1745}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "text"}]}'
+source: '{"tags": {"mlflow.user": "airflow", "mlflow.source.name": "/home/airflow/.local/bin/airflow",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/6b032c4aea2743fd80b9a88b09bbd439/artifacts
+deleted_time: 1697030892987
+end_time: 1696967356596
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 6b032c4aea2743fd80b9a88b09bbd439
+run_name: victorious-auk-341
+run_uuid: 6b032c4aea2743fd80b9a88b09bbd439
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696967233986
+status: 3
+tags: []
+user_id: airflow

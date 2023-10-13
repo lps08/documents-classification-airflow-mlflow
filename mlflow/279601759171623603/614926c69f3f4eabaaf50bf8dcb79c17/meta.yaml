@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/614926c69f3f4eabaaf50bf8dcb79c17/artifacts
+deleted_time: 1697050066896
+end_time: 1697049223500
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 614926c69f3f4eabaaf50bf8dcb79c17
+run_name: puzzled-roo-495
+run_uuid: 614926c69f3f4eabaaf50bf8dcb79c17
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697048377730
+status: 3
+tags: []
+user_id: airflow

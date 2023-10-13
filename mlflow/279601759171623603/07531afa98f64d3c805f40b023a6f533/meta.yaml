@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/07531afa98f64d3c805f40b023a6f533/artifacts
+deleted_time: 1697030892996
+end_time: 1696950990910
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 07531afa98f64d3c805f40b023a6f533
+run_name: bemused-rat-929
+run_uuid: 07531afa98f64d3c805f40b023a6f533
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696949388551
+status: 3
+tags: []
+user_id: airflow

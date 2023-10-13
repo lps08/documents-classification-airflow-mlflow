@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/05c0a15b02c644ebaf84c65d560af11c/artifacts
+deleted_time: 1697050066896
+end_time: 1697048749063
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 05c0a15b02c644ebaf84c65d560af11c
+run_name: handsome-sow-333
+run_uuid: 05c0a15b02c644ebaf84c65d560af11c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697048377730
+status: 3
+tags: []
+user_id: airflow

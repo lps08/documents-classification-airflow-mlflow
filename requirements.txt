@@ -1,0 +1,16 @@
+pytesseract
+pdf2image
+scikit-learn
+opencv-python
+numpy
+pandas
+pyenchant
+nltk
+unidecode
+mlxtend
+xgboost
+cryptography
+mlflow
+boto3
+pymysql
+seaborn

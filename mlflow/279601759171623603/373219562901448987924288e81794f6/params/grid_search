@@ -1,0 +1,4 @@
+GridSearchCV(cv=2, estimator=KNeighborsClassifier(),
+             param_grid={'n_neighbors': [3, 4, 7, 14, 28, 42], 'p': [1, 2],
+                         'weights': ['uniform', 'distance']},
+             return_train_score=True, scoring='accuracy')

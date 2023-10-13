@@ -1,0 +1,8 @@
+HalvingGridSearchCV(cv=2, estimator=RandomForestClassifier(), n_jobs=-1,
+                    param_grid={'criterion': ['gini', 'entropy'],
+                                'max_depth': [80, 90, 100, 110],
+                                'min_samples_leaf': [1, 2],
+                                'min_samples_split': [4, 5, 6],
+                                'n_estimators': [180, 200, 220, 240],
+                                'oob_score': [True, False]},
+                    scoring='accuracy')

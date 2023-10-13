@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/bfffffc2fe7c43c281b0b70deeb6856a/artifacts
+deleted_time: 1697030892997
+end_time: 1696960161774
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: bfffffc2fe7c43c281b0b70deeb6856a
+run_name: rumbling-frog-939
+run_uuid: bfffffc2fe7c43c281b0b70deeb6856a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696949388548
+status: 3
+tags: []
+user_id: airflow

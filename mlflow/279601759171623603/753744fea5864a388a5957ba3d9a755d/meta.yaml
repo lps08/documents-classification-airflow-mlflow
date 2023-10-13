@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/753744fea5864a388a5957ba3d9a755d/artifacts
+deleted_time: 1697030893002
+end_time: 1696868369255
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 753744fea5864a388a5957ba3d9a755d
+run_name: painted-skink-769
+run_uuid: 753744fea5864a388a5957ba3d9a755d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696860256701
+status: 3
+tags: []
+user_id: airflow
