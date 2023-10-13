@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/c59e141878d746368a75c537313efbad/artifacts
+deleted_time: 1697030893001
+end_time: 1696860443922
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: c59e141878d746368a75c537313efbad
+run_name: capable-doe-520
+run_uuid: c59e141878d746368a75c537313efbad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696860256702
+status: 3
+tags: []
+user_id: airflow

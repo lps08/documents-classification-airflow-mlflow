@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/8c807baeb4004f7dab96b83921a76ae7/artifacts
+deleted_time: 1697030893003
+end_time: 1696631022927
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 8c807baeb4004f7dab96b83921a76ae7
+run_name: bright-bass-26
+run_uuid: 8c807baeb4004f7dab96b83921a76ae7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696630860427
+status: 3
+tags: []
+user_id: airflow

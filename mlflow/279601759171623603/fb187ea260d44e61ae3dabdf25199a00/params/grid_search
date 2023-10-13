@@ -1,0 +1,8 @@
+HalvingGridSearchCV(cv=2, estimator=MLPClassifier(), n_jobs=-1,
+                    param_grid={'activation': ['identity', 'logistic', 'tanh',
+                                               'relu'],
+                                'hidden_layer_sizes': [(2,), (3,), (4,), (5,)],
+                                'learning_rate': ['constant', 'invscaling',
+                                                  'adaptive'],
+                                'solver': ['lbfgs', 'sgd', 'adam']},
+          ...

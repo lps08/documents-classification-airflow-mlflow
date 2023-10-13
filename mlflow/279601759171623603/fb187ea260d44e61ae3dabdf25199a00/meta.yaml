@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/fb187ea260d44e61ae3dabdf25199a00/artifacts
+deleted_time: 1697050066897
+end_time: 1697044776322
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: fb187ea260d44e61ae3dabdf25199a00
+run_name: unequaled-bird-350
+run_uuid: fb187ea260d44e61ae3dabdf25199a00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697043853016
+status: 3
+tags: []
+user_id: airflow

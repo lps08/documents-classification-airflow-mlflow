@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/c3fbeca812fb40d3976df821ff8c85ed/artifacts
+deleted_time: 1697050066898
+end_time: null
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: c3fbeca812fb40d3976df821ff8c85ed
+run_name: lyrical-snail-877
+run_uuid: c3fbeca812fb40d3976df821ff8c85ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697043848667
+status: 1
+tags: []
+user_id: airflow

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/373219562901448987924288e81794f6/artifacts
+deleted_time: 1697030893002
+end_time: 1696630906509
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 373219562901448987924288e81794f6
+run_name: welcoming-skink-429
+run_uuid: 373219562901448987924288e81794f6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696630860458
+status: 3
+tags: []
+user_id: airflow

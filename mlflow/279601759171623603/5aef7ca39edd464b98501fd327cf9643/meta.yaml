@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/5aef7ca39edd464b98501fd327cf9643/artifacts
+deleted_time: 1697030893001
+end_time: 1696868546072
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 5aef7ca39edd464b98501fd327cf9643
+run_name: gaudy-croc-17
+run_uuid: 5aef7ca39edd464b98501fd327cf9643
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696860256714
+status: 3
+tags: []
+user_id: airflow

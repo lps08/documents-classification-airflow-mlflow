@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/52091f445cb548d9b843be39dd7609fc/artifacts
+deleted_time: 1697030892986
+end_time: 1696969429766
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 52091f445cb548d9b843be39dd7609fc
+run_name: worried-tern-556
+run_uuid: 52091f445cb548d9b843be39dd7609fc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696967233986
+status: 3
+tags: []
+user_id: airflow

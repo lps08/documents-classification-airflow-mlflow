@@ -1,0 +1,7 @@
+digest: 0167fcdb
+name: dataset
+profile: '{"num_rows": 139, "num_elements": 139}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "text"}]}'
+source: '{"tags": {"mlflow.user": "airflow", "mlflow.source.name": "/home/airflow/.local/bin/airflow",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

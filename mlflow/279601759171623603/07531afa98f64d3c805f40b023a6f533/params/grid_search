@@ -1,0 +1,7 @@
+GridSearchCV(cv=2, estimator=MLPClassifier(),
+             param_grid={'activation': ['identity', 'logistic', 'tanh', 'relu'],
+                         'hidden_layer_sizes': [(2,), (3,), (4,), (5,)],
+                         'learning_rate': ['constant', 'invscaling',
+                                           'adaptive'],
+                         'solver': ['lbfgs', 'sgd', 'adam']},
+             return_train_score=True, scoring='accuracy')

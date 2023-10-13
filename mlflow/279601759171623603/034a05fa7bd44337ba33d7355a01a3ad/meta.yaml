@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/279601759171623603/034a05fa7bd44337ba33d7355a01a3ad/artifacts
+deleted_time: 1697030893002
+end_time: 1696860338888
+entry_point_name: ''
+experiment_id: '279601759171623603'
+lifecycle_stage: deleted
+run_id: 034a05fa7bd44337ba33d7355a01a3ad
+run_name: invincible-fox-471
+run_uuid: 034a05fa7bd44337ba33d7355a01a3ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696860256701
+status: 3
+tags: []
+user_id: airflow
