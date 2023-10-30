@@ -1,5 +1,0 @@
-HalvingGridSearchCV(cv=2, estimator=KNeighborsClassifier(), n_jobs=-1,
-                    param_grid={'n_neighbors': [12, 16, 24, 49, 98, 147],
-                                'p': [1, 2],
-                                'weights': ['uniform', 'distance']},
-                    scoring='accuracy')

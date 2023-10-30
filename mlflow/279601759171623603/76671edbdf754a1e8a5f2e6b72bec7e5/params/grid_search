@@ -1,8 +1,0 @@
-HalvingGridSearchCV(cv=2,
-                    estimator=XGBClassifier(base_score=None, booster=None,
-                                            callbacks=None,
-                                            colsample_bylevel=None,
-                                            colsample_bynode=None,
-                                            colsample_bytree=None, device=None,
-                                            early_stopping_rounds=None,
-                                            enabl...
