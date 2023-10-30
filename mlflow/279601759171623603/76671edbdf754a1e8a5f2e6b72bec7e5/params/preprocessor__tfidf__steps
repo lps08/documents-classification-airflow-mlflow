@@ -1,1 +1,0 @@
-[('column_selector', ColumnSelector(cols=['text'], drop_axis=True)), ('tfidf_vectorizer', TfidfVectorizer())]

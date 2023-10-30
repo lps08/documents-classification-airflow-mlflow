@@ -1,1 +1,0 @@
-{'n_estimators': [180, 200, 220, 240], 'criterion': ['gini', 'entropy'], 'max_depth': [80, 90, 100, 110], 'min_samples_split': [4, 5, 6], 'min_samples_leaf': [1, 2], 'oob_score': [True, False]}

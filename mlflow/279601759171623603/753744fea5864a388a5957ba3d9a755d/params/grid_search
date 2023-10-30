@@ -1,8 +1,0 @@
-GridSearchCV(cv=2, estimator=RandomForestClassifier(),
-             param_grid={'criterion': ['gini', 'entropy'],
-                         'max_depth': [70, 80, 90, 100, 110, 120, 130],
-                         'min_samples_leaf': [1, 2, 4],
-                         'min_samples_split': [3, 4, 5, 6],
-                         'n_estimators': [140, 160, 180, 200, 220, 240],
-                         'oob_score': [True, False]},
-             return_train_score=True, scoring='accuracy')

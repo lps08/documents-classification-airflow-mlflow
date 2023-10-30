@@ -1,1 +1,0 @@
-{'n_neighbors': [12, 16, 24, 49, 98, 147], 'weights': ['uniform', 'distance'], 'p': [1, 2]}

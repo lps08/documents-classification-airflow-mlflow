@@ -12,6 +12,7 @@ import mlflow.sklearn
 from mlflow import MlflowClient
 from src.model.evaluate import Evaluate
 from datetime import datetime
+import os
 
 # %%
 
@@ -100,6 +101,12 @@ def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:d
         score = evaluate.score_model()
         for key in score.keys():
             mlflow.log_param(key=key, value=str(score[key]))
+
+        print('Logging label encoder to MLFlow...')
+        label_encoder_name = f'label-encoder-{model_name}.pickel'
+        label_encoder_path = os.path.join(constants.DATA_DIR, label_encoder_name)
+        Utils.save_pickel_model(model=target_encoder_model, out_path=label_encoder_path)
+        mlflow.log_artifact(label_encoder_path)
 
         # log charts
         fig = evaluate.plot_confusion_matrix()
