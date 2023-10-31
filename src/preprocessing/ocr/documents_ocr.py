@@ -9,6 +9,24 @@ import os
 
 #%%
 def documents_ocr(documents_mapped_file:str = constants.MAPPED_FILES_CSV, sample_size:int = None if constants.SAMPLE_SIZE < 0 else constants.SAMPLE_SIZE, csv_out_name = constants.OCR_DOCUMENTS_CSV, dir_to_csv=constants.DATA_DIR):
+    """
+    Perform Optical Character Recognition (OCR) on documents and save the results to a CSV file.
+
+    Parameters:
+    documents_mapped_file (str, optional): The path to the CSV file containing information about the documents.
+    sample_size (int, optional): The number of documents to process. If None, all documents are processed.
+    csv_out_name (str): The name of the output CSV file.
+    dir_to_csv (str): The directory where the output CSV file will be saved.
+
+    Example:
+    ```
+    # Perform OCR on documents and save the results to a CSV file
+    documents_ocr(documents_mapped_file='mapped_documents.csv', sample_size=100, csv_out_name='ocr_results.csv')
+    ```
+    This function performs Optical Character Recognition (OCR) on a set of documents specified in a CSV file. It extracts
+    text from each document, filters and preprocesses the text, and then saves the results to a CSV file with the specified name.
+    The function allows processing a subset of documents specified by 'sample_size' or all documents if 'sample_size' is None.
+    """
     df = get_documents_mapped(path=os.path.join(constants.DATA_DIR, documents_mapped_file), sample_size=sample_size)
 
     documents_texts = []
