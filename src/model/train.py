@@ -74,6 +74,31 @@ def build_model(model, hyperparameters_space:dict):
     return model_pipeline
 
 def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:dict, model_name:str=None):
+    """
+    Train a machine learning model, log metrics, and artifacts to MLflow.
+
+    Parameters:
+    model (sklearn.base.BaseEstimator): The scikit-learn machine learning model to be trained.
+    df (pandas.DataFrame): The input DataFrame containing the dataset for training.
+    active_run (mlflow.ActiveRun): The active MLflow run to log information to.
+    hyperparameters_space (dict): A dictionary specifying hyperparameter configurations for model tuning.
+    model_name (str, optional): A name for the model to use when logging artifacts and metrics. Default is None.
+
+    Returns:
+    None
+
+    Example:
+    ```
+    import mlflow
+    from sklearn.model_selection import train_test_split
+
+    # Assuming 'df' and 'hyperparameters_space' are defined
+    with mlflow.start_run() as active_run:
+        mlflow_train(model, df, active_run, hyperparameters_space, model_name="MyModel")
+    ```
+    This function trains the specified model on the provided dataset, logs various metrics, hyperparameters,
+    and artifacts to the active MLflow run. The logged metrics and artifacts can be viewed in the MLflow UI.
+    """
     X, y, target_encoder_model = Utils.data_prep(df)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=69, stratify=y)
     
@@ -114,6 +139,30 @@ def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:d
         print('The models configurations and params can be seen on MLFlow UI http://localhost:5000/')
 
 def mlflow_train_track(model, df, hyperparameters_space:dict, experiment_name:str="creating_pipeline", model_name:str=None):
+    """
+    Train a machine learning model, log metrics, and artifacts to MLflow within a specified experiment.
+
+    Parameters:
+    model (sklearn.base.BaseEstimator): The scikit-learn machine learning model to be trained.
+    df (pandas.DataFrame): The input DataFrame containing the dataset for training.
+    hyperparameters_space (dict): A dictionary specifying hyperparameter configurations for model tuning.
+    experiment_name (str, optional): The name of the MLflow experiment to use. Default is "creating_pipeline."
+    model_name (str, optional): A name for the model to use when logging artifacts and metrics. Default is None.
+
+    Returns:
+    None
+
+    Example:
+    ```
+    from mlflow.tracking import MlflowClient
+
+    # Assuming 'model', 'df', and 'hyperparameters_space' are defined
+    mlflow_train_track(model, df, hyperparameters_space, experiment_name="MyExperiment", model_name="MyModel")
+    ```
+    This function sets up and tracks the machine learning training process within the specified MLflow experiment.
+    It logs various metrics, hyperparameters, and artifacts to the active MLflow run within the chosen experiment.
+    If the experiment doesn't exist, it creates a new one with the provided name.
+    """
     mlflow.set_tracking_uri(constants.MLFLOW_URI)
     mlflow.set_experiment(experiment_name=experiment_name)
 
@@ -127,6 +176,29 @@ def mlflow_train_track(model, df, hyperparameters_space:dict, experiment_name:st
     )
 
 def mlflow_registry_best_model(server_uri:str, experiment_name:str, model_registry_name:str, registry_by:str='cross validation mean'):
+    """
+    Register the best-performing model from an MLflow experiment into the model registry.
+
+    Parameters:
+    server_uri (str): The URI of the MLflow tracking server.
+    experiment_name (str): The name of the MLflow experiment to search for the best model.
+    model_registry_name (str): The name for the registered model in the model registry.
+    registry_by (str, optional): The parameter to determine the best model by. Default is 'cross validation mean'.
+
+    Returns:
+    None
+
+    Example:
+    ```
+    server_uri = "http://localhost:5000"  # Replace with your MLflow tracking server URI
+    experiment_name = "MyExperiment"
+    model_registry_name = "MyModel"
+    mlflow_registry_best_model(server_uri, experiment_name, model_registry_name)
+    ```
+    This function searches for the best-performing model within the specified MLflow experiment, determined by the
+    specified parameter. It then registers the best model into the model registry with the given name.
+    If the model registry or model version already exists, it will update the existing version.
+    """
     client = MlflowClient(tracking_uri=server_uri)
 
     experiment = client.get_experiment_by_name(experiment_name)
@@ -154,21 +226,3 @@ def mlflow_registry_best_model(server_uri:str, experiment_name:str, model_regist
         run_id=best_run.info.run_id,
     )
     print(f'Model version {model_registered.version} registered!')
-
-def select_best_model():
-    knn_model = Utils.get_estimator_from_pipeline(Utils.load_pickle_model(constants.KNN_MODEL_PATH))
-    rf_model = Utils.get_estimator_from_pipeline(Utils.load_pickle_model(constants.RF_MODEL_PATH))
-    mlp_model = Utils.get_estimator_from_pipeline(Utils.load_pickle_model(constants.MLP_MODEL_PATH))
-    xgb_model = Utils.get_estimator_from_pipeline(Utils.load_pickle_model(constants.XGB_MODEL_PATH))
-
-    best_model = knn_model
-
-    for model in [rf_model, mlp_model, xgb_model]:
-        if knn_model.best_score_ < model.best_score_:
-            best_model = model
-
-    print(f'Best model is {best_model}')
-    Utils.save_pickel_model(model=best_model, out_path=constants.BEST_MODEL_PATH)
-
-# preds = model.predict(X_test)
-# [target_encoder_model.inverse_transform([pred]) for pred in preds]
