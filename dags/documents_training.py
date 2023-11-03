@@ -115,12 +115,11 @@ def datasets_consumer_dag():
 
     documents_preprocessed_xcom = nlp_preprocessing_task()
     knn_consumer = knn_train_task(documents_preprocessed_xcom)
-    # rf_consumer = rf_train_task(documents_preprocessed_xcom)
+    rf_consumer = rf_train_task(documents_preprocessed_xcom)
     mlp_consumer = mlp_train_task(documents_preprocessed_xcom)
-    # xgb_consumer = xgb_train_task(documents_preprocessed_xcom)
+    xgb_consumer = xgb_train_task(documents_preprocessed_xcom)
 
     documents_ocr_file_sensor_task >> documents_preprocessed_xcom
-    # documents_preprocessed_xcom >> [knn_consumer, rf_consumer, mlp_consumer, xgb_consumer] >> select_best_model_task()
-    documents_preprocessed_xcom >> [knn_consumer, mlp_consumer] >> select_best_model_task()
+    documents_preprocessed_xcom >> [knn_consumer, rf_consumer, mlp_consumer, xgb_consumer] >> select_best_model_task()
 
 datasets_consumer_dag()
