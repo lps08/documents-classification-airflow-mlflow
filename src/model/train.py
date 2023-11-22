@@ -110,10 +110,6 @@ def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:d
         print('Trainig model...')
         model_pipeline.fit(X_train, y_train)
 
-        model_estimator = Utils.get_estimator_from_pipeline(model_pipeline)
-        print(f'Model best params: {model_estimator.best_params_}')
-        print(f'Model best score: {model_estimator.best_score_}')
-
         evaluate = Evaluate(
             model=model_pipeline,
             X_train=X_train,
