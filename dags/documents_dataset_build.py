@@ -36,7 +36,7 @@ def dataset_build():
     def mapping_files_task():
         mapping_files()
 
-    @task
+    @task(outlets=constants.OCR_DOCUMENTS_DATASET)
     def ocr():
         documents_ocr()
 
