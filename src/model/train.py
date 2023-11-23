@@ -119,6 +119,8 @@ def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:d
         )
 
         print('Logging metrics to MLFlow...')
+        mlflow.set_tag("model_name", model_name)
+
         score = evaluate.score_model()
         for key in score.keys():
             mlflow.log_param(key=key, value=str(score[key]))
