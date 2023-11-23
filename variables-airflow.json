@@ -1,0 +1,14 @@
+{
+    "best_model_path": "data/best_model.pickle",
+    "data_dir": "data/",
+    "dataset_path": "dataset/",
+    "documents_ocr_path": "data/ocr_docs.csv",
+    "experiment_name": "creating_pipeline",
+    "knn_path": "data/knn_model.pickle",
+    "min_doc_class": 400,
+    "mlp_path": "data/mlp_model.pickle",
+    "model_registry_name": "model_doccument_serving",
+    "rf_path": "data/rf_model.pickle",
+    "sample_size": 8000,
+    "xgb_path": "data/xgb_model.pickle"
+}
