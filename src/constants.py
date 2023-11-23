@@ -17,5 +17,6 @@ BEST_MODEL_PATH = Variable.get('best_model_path')
 MLFLOW_URI = "http://mlflow:5000"
 EXPERIMENT_NAME = Variable.get('experiment_name')
 MODEL_REGISTRY_NAME = Variable.get('model_registry_name')
+TEST_SIZE = float(Variable.get('test_size'))
 
 # MLFLOW_URI = "http://localhost:5000"
