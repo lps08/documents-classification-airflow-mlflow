@@ -119,6 +119,8 @@ def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:d
         )
 
         print('Logging metrics to MLFlow...')
+        mlflow.set_tag("model_name", model_name)
+
         score = evaluate.score_model()
         for key in score.keys():
             mlflow.log_param(key=key, value=str(score[key]))
@@ -200,16 +202,19 @@ def mlflow_registry_best_model(server_uri:str, experiment_name:str, model_regist
     experiment = client.get_experiment_by_name(experiment_name)
     runs = client.search_runs(experiment_ids=[experiment.experiment_id])
 
-    best_run = runs.pop()
-    cv_best = best_run.data.params[registry_by]
+    cv_best = 0
 
     for run in runs:
-        cv_run = run.data.params[registry_by]
+        if registry_by in run.data.params.keys():
+            cv_run = float(run.data.params.get(registry_by))
 
-        if cv_run > cv_best:
-            best_run = run
-            cv_best = cv_run
-
+            if cv_run > cv_best:
+                best_run = run
+                cv_best = cv_run
+        else:
+            pass
+    
+    print(f"Best model name: {run.data.tags.get('model_name')}")
     print(f'Best model run: {best_run.info.run_name} | run id: {best_run.info.artifact_uri}')
     print('Registering best model...')
 
