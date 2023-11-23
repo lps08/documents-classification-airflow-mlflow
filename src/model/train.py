@@ -100,7 +100,7 @@ def mlflow_train(model, df, active_run:mlflow.ActiveRun, hyperparameters_space:d
     and artifacts to the active MLflow run. The logged metrics and artifacts can be viewed in the MLflow UI.
     """
     X, y, target_encoder_model = Utils.data_prep(df)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=69, stratify=y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=constants.TEST_SIZE, random_state=69, stratify=y)
     
     with active_run:
         mlflow.sklearn.autolog()
