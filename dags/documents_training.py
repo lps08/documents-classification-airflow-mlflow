@@ -105,7 +105,7 @@ def datasets_consumer_dag():
             model_name='XGBoost',
         )
 
-    @task
+    @task(trigger_rule='one_success')
     def select_best_model_task():
         mlflow_registry_best_model(
             server_uri=constants.MLFLOW_URI,
