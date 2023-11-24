@@ -307,12 +307,12 @@ services:
       dockerfile: Dockerfile.mlflow
     image: mlflow
     restart: always
-    volumes:
-      - ${AIRFLOW_PROJ_DIR:-.}/mlflow:/opt/mlflow
+    # volumes:
+    #   - ${AIRFLOW_PROJ_DIR:-.}/mlflow:/opt/mlflow
     ports:
       - "${MLFLOW_PORT}:5000"
     # command: mlflow server --backend-store-uri mysql+pymysql://${MLFLOW_MYSQL_USER}:${MLFLOW_MYSQL_PASSWORD}@mlflow-db:3306/${MLFLOW_MYSQL_DATABASE} --default-artifact-root ${MLFLOW_DIR_MODELS} --host 0.0.0.0
-    command: mlflow server --backend-store-uri file:///opt/mlflow --host 0.0.0.0
+    command: mlflow server --backend-store-uri sqlite:///mlflow.db --host 0.0.0.0
 
 volumes:
   postgres-db-volume:
